@@ -19,11 +19,10 @@ class Array:
         Insert value at given index.
         Elements at index and to the right are shifted one position to the right.
         """
-        # Manual bounds check (so you understand behavior)
+        # Manual bounds check 
         if index < 0 or index > len(self._data):
             raise IndexError("insert_at index out of range")
 
-        # --- Manual shifting version for learning ---
         self._data.append(None)  # extend the list by one dummy slot
 
         # shift elements to the right starting from the end
@@ -71,10 +70,9 @@ class Array:
         """Return a string like '[3, 6, 9]'."""
         return str(self._data)
 
-    # Optional: let you index like a normal list: arr[0]
+
     def __getitem__(self, index):
         return self._data[index]
 
-    # Optional: set by index: arr[0] = 10
     def __setitem__(self, index, value):
         self._data[index] = value
